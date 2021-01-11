@@ -1,0 +1,20 @@
+{
+  "name": "Site Bomb",
+  "version": "1.0",
+  "description": "You can drop bombs on any pages",
+  "permissions": ["activeTab", "http://*/*", "https://*/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "browser_action": {
+    "default_title": "Site Bomb"
+  },
+  "author": "YuikoIto",
+  "manifest_version": 2
+}
