@@ -1,5 +1,5 @@
 const browserLanguage = function () {
-  var ua = window.navigator.userAgent.toLowerCase();
+  const ua = window.navigator.userAgent.toLowerCase();
   try {
     // chromeは以下で利用者のブラウザ言語を取得できる
     if (ua.indexOf("chrome") != -1) {
@@ -23,7 +23,7 @@ const browserLanguage = function () {
   }
 };
 
-var toggle = false;
+let toggle = false;
 chrome.browserAction.onClicked.addListener(function (tab) {
   if (!toggle) {
     explosion();
