@@ -1,5 +1,5 @@
 (function () {
-  var Bomb,
+  let Bomb,
     Explosion,
     Particle,
     targetTime,
@@ -30,7 +30,7 @@
 
   w.requestAnimationFrame ||
     (w.requestAnimationFrame = function (callback) {
-      var currentTime;
+      let currentTime;
       targetTime = Math.max(targetTime + 10, (currentTime = +new Date()));
       return w.setTimeout(function () {
         return callback(+new Date());
@@ -43,7 +43,7 @@
     });
 
   w.findClickPos = function (e) {
-    var posx, posy;
+    let posx, posy;
     posx = 0;
     posy = 0;
     if (!e) e = window.event;
@@ -67,7 +67,7 @@
   };
 
   w.getOffset = function (el) {
-    var body, _x, _y;
+    let body, _x, _y;
     body = document.getElementsByTagName("body")[0];
     _x = 0;
     _y = 0;
@@ -97,7 +97,7 @@
     }
 
     Particle.prototype.tick = function (blast) {
-      var distX,
+      let distX,
         distXS,
         distY,
         distYS,
@@ -229,7 +229,7 @@
     function Explosion() {
       this.tick = __bind(this.tick, this);
       this.dropBomb = __bind(this.dropBomb, this);
-      var char,
+      let char,
         _ref2,
         _this = this;
       if (window.FONTBOMB_LOADED) return;
@@ -254,7 +254,7 @@
       });
       this.explosifyNodes(this.body.childNodes);
       this.chars = function () {
-        var _j, _len2, _ref3, _results;
+        let _j, _len2, _ref3, _results;
         _ref3 = document.getElementsByTagName("particle");
         _results = [];
         for (_j = 0, _len2 = _ref3.length; _j < _len2; _j++) {
@@ -267,7 +267,7 @@
     }
 
     Explosion.prototype.explosifyNodes = function (nodes) {
-      var node, _j, _len2, _results;
+      let node, _j, _len2, _results;
       _results = [];
       for (_j = 0, _len2 = nodes.length; _j < _len2; _j++) {
         node = nodes[_j];
@@ -277,7 +277,7 @@
     };
 
     Explosion.prototype.explosifyNode = function (node) {
-      var name, newNode, _j, _len2, _ref2;
+      let name, newNode, _j, _len2, _ref2;
       _ref2 = [
         "script",
         "style",
@@ -316,9 +316,9 @@
     };
 
     Explosion.prototype.explosifyText = function (string) {
-      var char, chars, index;
+      let char, chars, index;
       chars = (function () {
-        var _len2, _ref2, _results;
+        let _len2, _ref2, _results;
         _ref2 = string.split("");
         _results = [];
         for (index = 0, _len2 = _ref2.length; index < _len2; index++) {
@@ -335,7 +335,7 @@
       })();
       chars = chars.join("");
       chars = (function () {
-        var _len2, _ref2, _results;
+        let _len2, _ref2, _results;
         _ref2 = chars.split("&nbsp;");
         _results = [];
         for (index = 0, _len2 = _ref2.length; index < _len2; index++) {
@@ -354,14 +354,14 @@
     };
 
     Explosion.prototype.dropBomb = function (event) {
-      var pos;
+      let pos;
       pos = window.findClickPos(event);
       this.bombs.push(new Bomb(pos.x, pos.y));
       if (window.FONTBOMB_PREVENT_DEFAULT) return event.preventDefault();
     };
 
     Explosion.prototype.tick = function () {
-      var bomb, char, _j, _k, _l, _len2, _len3, _len4, _ref2, _ref3, _ref4;
+      let bomb, char, _j, _k, _l, _len2, _len3, _len4, _ref2, _ref3, _ref4;
       _ref2 = this.bombs;
       for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
         bomb = _ref2[_j];
