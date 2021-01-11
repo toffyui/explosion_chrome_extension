@@ -2,8 +2,7 @@
 
 
 ## View
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VQhKsFZDyzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://gyazo.com/709b24a394a108f2178405f4ee49e085"><img src="https://i.gyazo.com/709b24a394a108f2178405f4ee49e085.gif" alt="Image from Gyazo" width="1000"/></a>
 
 
 ## What
