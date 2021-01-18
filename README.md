@@ -7,7 +7,8 @@
 You can drop bombs on any web site!
 
 ## Install
-In Preparation...
+You can download here.
+https://chrome.google.com/webstore/detail/site-bomb/hnnabnffilimfgdcinlijkjkdemdonea/related?hl=ja&authuser=0
 
 ## Thanks
 
